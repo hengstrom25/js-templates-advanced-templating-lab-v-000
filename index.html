@@ -26,7 +26,16 @@
     <input type="text" id="description" name ="description" value="{{description}}">
     </p>
     
-    <<#each
+    {{#each ingredients}}
+    
+    <label for="ingredients">Ingredient: </label>
+    <input type="text" id="ingredients" name="ingredients" value="{{this}}">
+      {{/each}}
+    <input type="submit">
+    
+      </form>
+    </script>
+    
     </script>
     <div id="mocha"></div>
     <script src="node_modules/mocha/mocha.js"></script>
