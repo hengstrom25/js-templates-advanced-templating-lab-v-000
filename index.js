@@ -11,23 +11,22 @@ function init() {
   document.getElementById('main').innerHTML = formTemplateFn({ingredients: ['', '', '', '', '']});
 }  
   
-function handleSubmit() {
-  let recipe = {};
-  let rName = document.getElementById('name');
-  let rDesc = document.getElementById('description');
-  let rIngr = document.getElementById('ingredients');
-  
-  recipe.name = rName.value;
-  recipe.description = rDesc.value;
-  recipe.ingredients = [];
-  for(let i = 0; i < rIngr.length; i++) {
+ function handleSubmit() {
+   let recipe = {}
+   let rName = document.getElementById('name');
+   let rDesc = document.getElementById('description');
+   let rIngr = document.getElementsByName('ingredients');
+ 
+    recipe.name = rName.value;
+   recipe.description = rDesc.value;
+   recipe.ingredients = [];
+   for(let i = 0; i < rIngr.length; i++) {
      recipe.ingredients.push(rIngr[i].value);
    }
-  
-  let recipeTemplate = document.getElementById('recipe-template').innerHTML;
-  let recipeFunction = Handlebars.compile(recipeTemplate);
-  document.getElementById('main').innerHTML = recipeFunction(recipe);
- } 
+   let recipeTemplate = document.getElementById('recipe-template').innerHTML;
+   let recipeFunction = Handlebars.compile(recipeTemplate);
+   document.getElementById('main').innerHTML = recipeFunction(recipe);
+ }
 
 function displayEditForm() {
   let recipe = {}
