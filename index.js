@@ -12,7 +12,6 @@ function init() {
 }  
   
 function handleSubmit() {
-  
   let recipe = {};
   let rName = document.getElementbyId('name');
   let rDesc = document.getElementById('description');
@@ -29,6 +28,16 @@ function handleSubmit() {
   let recipeFunction = Handlebars.compile(recipeTemplate);
   document.getElementById('main').innerHTML = recipeFunction(recipe);
 }  
+
+function displayEditForm() {
+  let recipe = {}
+  let rName = document.getElementById('recipeName');
+  let rDesc = document.getElementById('recipeDescription');
+  let rIngr = document.getElementsByName('ingredients');
+  
+  
+  
+}
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
