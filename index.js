@@ -27,7 +27,7 @@ function handleSubmit() {
   let recipeTemplate = document.getElementById('recipe-template').innerHTML;
   let recipeFunction = Handlebars.compile(recipeTemplate);
   document.getElementById('main').innerHTML = recipeFunction(recipe);
-}  
+ } 
 
 function displayEditForm() {
   let recipe = {}
