@@ -11,7 +11,12 @@ function init() {
   document.getElementById('main').innerHTML = formTemplateFn({ingredients: ['', '', '', '', '']});
 }  
   
-  
+function handleSubmit() {
+  let recipe = {};
+  let rName = document.getElementbyId('name');
+  let rDesc = document.getElementById('description');
+  let rIngr = document.getElementById('ingredients');
+}  
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
