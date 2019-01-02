@@ -26,7 +26,8 @@ function handleSubmit() {
   }
   
   let recipeTemplate = document.getElementById('recipe-template').innerHTML;
-  let recipeFunciton
+  let recipeFunction = Handlebars.compile(recipeTemplate);
+  document.getElementById('main').innerHTML = recipeFunction(recipe);
 }  
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
