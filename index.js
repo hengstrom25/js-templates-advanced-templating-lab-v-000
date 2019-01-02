@@ -35,8 +35,16 @@ function displayEditForm() {
   let rDesc = document.getElementById('recipeDescription');
   let rIngr = document.getElementsByName('ingredients');
   
-  
-  
+  recipe.name = rName.innerHTML;
+  recipe.description= rDesc.innerHTML;
+  recipe.ingredients = [];
+  for(let i = 0; i < rIngr.length; i++) {
+     recipe.ingredients.push(rIngr[i].innerHTML);
+   }
+   
+  let recipeTemplate = document.getElementById('recipe-form-template').innerHTML;
+  let recipeFunction = Handlebars.compile(recipeTemplate)
+  document.getElementById('main').innerHTML = recipeFunction(recipe);
 }
 
 
