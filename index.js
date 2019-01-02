@@ -13,7 +13,7 @@ function init() {
   
 function handleSubmit() {
   let recipe = {};
-  let rName = document.getElementbyId('name');
+  let rName = document.getElementById('name');
   let rDesc = document.getElementById('description');
   let rIngr = document.getElementById('ingredients');
   
