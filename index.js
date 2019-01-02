@@ -12,10 +12,21 @@ function init() {
 }  
   
 function handleSubmit() {
+  
   let recipe = {};
   let rName = document.getElementbyId('name');
   let rDesc = document.getElementById('description');
   let rIngr = document.getElementById('ingredients');
+  
+  recipe.name = rName.value;
+  recipe.description = rDesc.value;
+  recipe.ingredients = [];
+  for(let i=0 < rIngr.length; i++) {
+    recipe.ingredients.push(rIngr[i].value);
+  }
+  
+  let recipeTemplate = document.getElementById('recipe-template').innerHTML;
+  let recipeFunciton
 }  
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
